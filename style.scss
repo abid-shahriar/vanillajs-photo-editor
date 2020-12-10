@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@mixin flex($dir: row) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $dir;
+}
+
+body {
+  background-color: #d5d5d5;
+  min-height: 100vh;
+  @include flex(column);
+}
+
+.app-wrapper {
+  width: 1300px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.336);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+nav {
+  height: 7rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.336);
+  width: 100%;
+  @include flex;
+  justify-content: flex-start;
+  padding: 0 2rem;
+  h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    color: crimson;
+  }
+}
+
+.container {
+  @include flex();
+  justify-content: space-between;
+  flex: 1 1;
+  padding: 2rem;
+}
+
+.edit-section {
+  @include flex(column);
+  height: 60rem;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  padding-left: 10rem;
+
+  .slide-container {
+    width: 100%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    label {
+      text-transform: capitalize;
+      flex-basis: 30%;
+    }
+
+    input {
+      width: 100%;
+      flex-basis: 70%;
+    }
+  }
+}
