@@ -21,3 +21,4 @@ hueSlide.addEventListener("input", (e) => {
   hue = e.target.value;
   image.style.filter = `brightness(${brightness}%) contrast(${contrast}%) hue-rotate(${hue}deg)`;
 });
+
