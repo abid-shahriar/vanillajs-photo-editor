@@ -14,25 +14,38 @@
         <div class="image-section">
           <div class="image">
             <img
+              class="image"
               src="https://source.unsplash.com/collection/1/"
               height="600"
               width="800"
-              alt=""
+              alt="image"
             />
           </div>
         </div>
         <div class="edit-section">
           <div class="slide-container">
             <label for="">brightness:</label>
-            <input type="range" class="brightness" />
+            <input
+              type="range"
+              class="brightness"
+              min="0"
+              max="200"
+              value="100"
+            />
           </div>
           <div class="slide-container">
             <label for="">contrast:</label>
-            <input type="range" class="contrast" />
+            <input
+              type="range"
+              class="contrast"
+              min="0"
+              max="200"
+              value="100"
+            />
           </div>
           <div class="slide-container">
             <label for="">hue:</label>
-            <input type="range" class="hue" />
+            <input type="range" class="hue" max="360" min="-360" value="0" />
           </div>
           <div class="slide-container">
             <label for="">invert:</label>
